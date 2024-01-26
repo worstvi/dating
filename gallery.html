@@ -1,44 +1,16 @@
-<!-- gallery.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles2.css">
-  <title>Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <title>Галерея</title>
 </head>
 <body>
-  <div class="gallery">
-    <div class="gallery-item">
-      <h2>Кинотеатр</h2>
-      <img src="images/image1.jpg" alt="Кинотеатр">
-      <button onclick="selectActivity('Кинотеатр')">Выбрать</button>
-    </div>
-
-    <div class="gallery-item">
-      <h2>Прогулка</h2>
-      <img src="images/image2.jpg" alt="Прогулка">
-      <button onclick="selectActivity('Прогулка')">Выбрать</button>
-    </div>
-
-    <div class="gallery-item">
-      <h2>Каток</h2>
-      <img src="images/image3.jpg" alt="Каток">
-      <button onclick="selectActivity('Каток')">Выбрать</button>
-    </div>
-
-    <div class="gallery-item">
-      <h2>В гости</h2>
-      <img src="images/image4.jpg" alt="В гости">
-      <button onclick="selectActivity('В гости')">Выбрать</button>
-    </div>
-
-    <div class="gallery-item">
-      <h2>Если здесь нет того, чего бы вы хотели, то напишите мне свой вариант</h2>
-      <img src="images/unknown.jpg" alt="Предложите свой вариант">
-      <a href="https://www.instagram.com/musasimyam/" class="button" target="_blank">Выбрать</a>
-    </div>
+  <div class="container">
+    <h1>Выберите активность</h1>
+    <div class="gallery" id="gallery"></div>
   </div>
-  <script src="script2.js"></script>
+  <script src="gallery.js"></script>
 </body>
 </html>
