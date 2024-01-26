@@ -32,19 +32,3 @@ h1 {
   border-radius: 5px;
   background-color: #C5BEB8;
 }
-
-#noButton.move {
-  position: absolute;
-  left: ${Math.random() * 70}vw; /* Random horizontal position */
-  top: ${Math.random() * 70}vh; /* Random vertical position */
-  animation: moveAnimation 1s infinite alternate;
-}
-
-@keyframes moveAnimation {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(10px, 10px);
-  }
-}
