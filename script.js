@@ -1,5 +1,5 @@
 // script.js
-const fetch = require('node-fetch'); // Если используете Node.js
+const fetch = require('node-fetch');
 
 function moveNoButton() {
   // ... (как было ранее)
