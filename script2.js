@@ -1,4 +1,4 @@
-// script.js
+// script2.js
 const fetch = require('node-fetch'); // Если используете Node.js
 
 function moveNoButton() {
