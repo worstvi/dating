@@ -1,19 +1,18 @@
 /* styles.css */
+
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
+  padding: 0;
+  background-color: #F1E9E7;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #CDB1C8;
-  font-family: 'Arial', sans-serif;
 }
 
 .container {
   text-align: center;
-  background-color: #F1E9E7;
-  padding: 20px;
-  border-radius: 10px;
 }
 
 h1 {
@@ -25,22 +24,19 @@ h1 {
 }
 
 .button {
+  background-color: #EDB9AC;
   padding: 10px 20px;
-  font-size: 1em;
-  margin: 0 10px;
-  cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #C5BEB8;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
   text-decoration: none;
-  color: #ffffff;
+  transition: background-color 0.3s ease;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #F1E9E7;
+.button:hover {
+  background-color: #C5BEB8;
 }
 
 .gallery {
@@ -70,7 +66,8 @@ body {
   margin: 10px 0;
 }
 
-.gallery-item button, .gallery-item a.button {
+.gallery-item button,
+.gallery-item a.button {
   background-color: #EDB9AC;
   padding: 8px 16px;
   border: none;
@@ -82,6 +79,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.gallery-item button:hover, .gallery-item a.button:hover {
+.gallery-item button:hover,
+.gallery-item a.button:hover {
   background-color: #C5BEB8;
 }
