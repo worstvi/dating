@@ -1,8 +1,19 @@
 // script.js
-const fetch = require('node-fetch');
+const fetch = require('node-fetch'); // Если используете Node.js
 
 function moveNoButton() {
-  // ... (как было ранее)
+  const noButton = document.querySelector('.buttons button');
+  const newPosition = {
+    left: Math.random() * (window.innerWidth - noButton.clientWidth),
+    top: Math.random() * (window.innerHeight - noButton.clientHeight),
+  };
+
+  // Ограничиваем перемещение кнопки в пределах видимой области окна
+  const maxX = window.innerWidth - noButton.clientWidth;
+  const maxY = window.innerHeight - noButton.clientHeight;
+
+  noButton.style.left = Math.min(newPosition.left, maxX) + 'px';
+  noButton.style.top = Math.min(newPosition.top, maxY) + 'px';
 }
 
 function sendTelegramNotification(activity) {
@@ -32,3 +43,11 @@ function selectActivity(activity) {
 
   // Здесь вы можете добавить код для дополнительных действий, связанных с выбором деятельности.
 }
+
+// Обработчик события для кнопок в галерее
+document.querySelectorAll('.gallery-item button, .gallery-item a.button').forEach(button => {
+  button.addEventListener('click', function () {
+    const activity = this.dataset.activity;
+    selectActivity(activity);
+  });
+});
