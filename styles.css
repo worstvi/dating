@@ -1,18 +1,18 @@
-/* styles.css */
-
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #F1E9E7;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #CDB1C8;
+  font-family: 'Arial', sans-serif;
 }
 
 .container {
   text-align: center;
+  background-color: #F1E9E7;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 h1 {
@@ -24,62 +24,27 @@ h1 {
 }
 
 .button {
-  background-color: #EDB9AC;
   padding: 10px 20px;
+  font-size: 1em;
+  margin: 0 10px;
+  cursor: pointer;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
   background-color: #C5BEB8;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
+#noButton.move {
+  position: absolute;
+  left: ${Math.random() * 70}vw; /* Random horizontal position */
+  top: ${Math.random() * 70}vh; /* Random vertical position */
+  animation: moveAnimation 1s infinite alternate;
 }
 
-.gallery-item {
-  width: 300px;
-  margin: 20px;
-  text-align: center;
-  background-color: #CDB1C8;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-item h2 {
-  color: #C7777A;
-}
-
-.gallery-item img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 10px 0;
-}
-
-.gallery-item button,
-.gallery-item a.button {
-  background-color: #EDB9AC;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.gallery-item button:hover,
-.gallery-item a.button:hover {
-  background-color: #C5BEB8;
+@keyframes moveAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
 }
